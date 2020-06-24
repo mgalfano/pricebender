@@ -2,6 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import UpdatePartsList from './components/UpdatePartsList.jsx';
+import AddNewPart from './components/AddNewPart';
 
 class App extends React.Component {
 
@@ -10,6 +11,7 @@ class App extends React.Component {
       <div className="main">
         <h1>Pricebender</h1>
         <UpdatePartsList />
+        <AddNewPart />
       </div>
     );
   }

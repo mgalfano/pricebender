@@ -1,3 +1,5 @@
+// TODO: bug - updating database returns success message even though app isn't connected to the server.
+
 import React from 'react';
 
 function UpdatePartsList() {
