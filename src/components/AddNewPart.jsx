@@ -3,7 +3,7 @@ import React from 'react';
 function AddNewPart() {
   return (
     <div>
-      <button>
+      <button className="add-part-button">
         Add New Part
       </button>
     </div>

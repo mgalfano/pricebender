@@ -32,7 +32,25 @@ h1 {
   text-align: center;
 }
 
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
 .update-button {
+  background-color: rgb(76, 127, 175);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.add-part-button {
   background-color: rgb(76, 127, 175);
   border: none;
   color: white;

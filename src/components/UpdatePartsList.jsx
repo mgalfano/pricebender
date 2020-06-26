@@ -18,9 +18,9 @@ function UpdatePartsList() {
 
   return (
     <div>
-        <button onClick={handleClick} className="update-button">
-          Update Parts List
-        </button>
+      <button onClick={handleClick} className="update-button">
+        Update Parts List
+      </button>
     </div>
     
   );

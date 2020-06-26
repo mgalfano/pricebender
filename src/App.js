@@ -10,8 +10,10 @@ class App extends React.Component {
     return (
       <div className="main">
         <h1>Pricebender</h1>
-        <UpdatePartsList />
-        <AddNewPart />
+        <div className="buttons-container">
+          <UpdatePartsList />
+          <AddNewPart />
+        </div>
       </div>
     );
   }
