@@ -1,17 +1,19 @@
-// TODO: bug - updating database returns success message even though app isn't connected to the server.
-
 import React from 'react';
 
 function UpdatePartsList() {
 
+  // TODO: refactor to render result
   let handleClick = () => {
     fetch('http://localhost:3000/database/updater')
     .then(
       (result) => {
-        alert('Parts List updated succcessfully');
-      },
-      (error) => {
-        console.log('error fetching updater:', error);
+        console.log('result after fetching updater:', result);
+        if (result.status === 200) {
+          alert('Parts List updated succcessfully');
+        } else {
+          alert('Update failed');
+          console.log('error fetching updater:', result.statusText);
+        }
       }
     )
   }
