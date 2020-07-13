@@ -11,8 +11,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       isAddingPart: false,
-      isUpdatingList: false
+      isUpdatingList: false,
     };
+    this.updatePrices = this.updatePrices.bind(this);
   }
 
   updatePrices() {
@@ -21,10 +22,10 @@ class App extends React.Component {
       (result) => {
         console.log('result after fetching updater:', result);
         if (result.status === 200) {
-          alert('Parts List updated succcessfully');
+          this.setState({updateSuccess: true});
         } else {
           // should this be under .catch instead?
-          alert('Update failed');
+          this.setState({updateSuccess: false});
           console.log('error fetching updater:', result.statusText);
         }
       }
@@ -36,11 +37,13 @@ class App extends React.Component {
       <div className="main">
         <h1>Pricebender</h1>
         <div className="buttons-container">
-          <UpdatePartsList updatePrices={this.updatePrices}/>
+          <UpdatePartsList 
+            updatePrices={this.updatePrices}
+          />
           <AddNewPart />
         </div>
         <div className="message-container">
-          <StatusMessage currentStatus={this.state}/>
+          <StatusMessage currentStatus={this.state} />
         </div>
         <div className="content-container">
           <AddNewPartForm isAddingPart={this.state.isAddingPart} />
